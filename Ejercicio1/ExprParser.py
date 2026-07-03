@@ -1,4 +1,4 @@
-# Generated from c:/Users/joseq/LYA2/compilador/Ejercicio1/Expr.g4 by ANTLR 4.13.1
+# Generated from c:/Users/joseq/LYA2/compilador/prueba/Expr.g4 by ANTLR 4.13.1
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -12,7 +12,7 @@ def serializedATN():
     return [
         4,1,3,10,2,0,7,0,2,1,7,1,1,0,1,0,1,0,1,1,1,1,1,1,0,0,2,0,2,0,0,7,
         0,4,1,0,0,0,2,7,1,0,0,0,4,5,3,2,1,0,5,6,5,0,0,1,6,1,1,0,0,0,7,8,
-        5,0,0,1,8,3,1,0,0,0,0
+        5,1,0,0,8,3,1,0,0,0,0
     ]
 
 class ExprParser ( Parser ):
@@ -25,9 +25,9 @@ class ExprParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'+'" ]
+    literalNames = [ "<INVALID>", "<INVALID>", "'+'" ]
 
-    symbolicNames = [ "<INVALID>", "MAS", "NUM", "WS" ]
+    symbolicNames = [ "<INVALID>", "NUM", "MAS", "WS" ]
 
     RULE_root = 0
     RULE_expr = 1
@@ -35,8 +35,8 @@ class ExprParser ( Parser ):
     ruleNames =  [ "root", "expr" ]
 
     EOF = Token.EOF
-    MAS=1
-    NUM=2
+    NUM=1
+    MAS=2
     WS=3
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
@@ -94,8 +94,8 @@ class ExprParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def EOF(self):
-            return self.getToken(ExprParser.EOF, 0)
+        def NUM(self):
+            return self.getToken(ExprParser.NUM, 0)
 
         def getRuleIndex(self):
             return ExprParser.RULE_expr
@@ -110,7 +110,7 @@ class ExprParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 7
-            self.match(ExprParser.EOF)
+            self.match(ExprParser.NUM)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
