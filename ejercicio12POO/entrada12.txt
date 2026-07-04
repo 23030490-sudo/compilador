@@ -1,0 +1,22 @@
+public class Main {
+	public static void main(String[] args) {
+		Persona persona = new Persona(18);
+		System.out.println("¿Es adulto?: " + persona.esAdulto());
+	}
+}
+
+class Persona {
+	int edad;
+
+	Persona(int edad) {
+		this.edad = edad;
+	}
+
+	String esAdulto() {
+		String adulto = "No";
+		if (edad >= 18) {
+			adulto = "Sí";
+		}
+		return adulto;
+	}
+}
