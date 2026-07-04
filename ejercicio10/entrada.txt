@@ -1,0 +1,1 @@
+Print("si logro terminar todos mis ejercicios de automatas antes del examen, voy a poder repasar con calma y sacar una buena calificación.")
