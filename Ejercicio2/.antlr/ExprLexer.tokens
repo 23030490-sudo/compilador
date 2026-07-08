@@ -1,4 +1,4 @@
-NUM=1
-RESTA=2
+MENOS=1
+NUM=2
 WS=3
-'-'=2
+'-'=1

@@ -1,6 +1,8 @@
 grammar Expr;
+
 root : expr EOF;
-expr : (NUM | RESTA)+ ;
-NUM : [0-9]+ ;
-RESTA: '-' ;
+expr: expr MENOS expr | NUM;
+//expr: EOF;
+MENOS: '-';
+NUM: [0-9]+;
 WS : [ \t\r\n]+ -> skip ;
