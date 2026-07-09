@@ -1,0 +1,7 @@
+PRINT=1
+ID=2
+CADENA=3
+IGUAL=4
+WS=5
+'print'=1
+'='=4
