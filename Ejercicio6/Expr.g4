@@ -6,7 +6,10 @@ grammar Expr;
 
 root : expr EOF ;
 
-expr : NUM SUM NUM MULT NUM ;
+expr : expr MULT expr
+     | expr SUM expr
+     | NUM
+     ;
 
 NUM  : [0-9]+ ;
 SUM  : '+' ;
