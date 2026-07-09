@@ -1,12 +1,14 @@
 grammar Expr;
 
-root : IF P1 ID MAYORQUE NUM P2 EOF ;
+root : expr EOF;
 
-IF : 'if' ;
-ID : [a-zA-Z]+ ;
-MAYORQUE : '>' ;
-NUM : [0-9]+ ;
-P1 : '(' ;
-P2 : ')' ;
+expr : IF P1 ID MAYORQUE NUM P2;
 
-WS : [ \t\r\n]+ -> skip ;
+IF : 'if';
+ID : [a-zA-Z]+;
+MAYORQUE : '>';
+NUM : [0-9]+;
+P1 : '(';
+P2 : ')';
+
+WS : [ \t\r\n]+ -> skip;
